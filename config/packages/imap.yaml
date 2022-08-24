@@ -1,0 +1,11 @@
+imap:
+    connections:
+        example_connection:
+            mailbox: "{imap.strato.de:993/imap/ssl}"
+            username: '%env(EXAMPLE_CONNECTION_USERNAME)%'
+            password: '%env(EXAMPLE_CONNECTION_PASSWORD)%'
+
+        #example_WRONG_connection:
+            #mailbox: "{imap.strato.de:993/imap/ssl}"
+            #username: 'WRONG'
+            #password: 'WRONG'
