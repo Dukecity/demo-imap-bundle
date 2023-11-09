@@ -1,7 +1,7 @@
 # Demo for Symfony IMAP-Bundle
 
 Demo-App for [imap-bundle](https://github.com/secit-pl/imap-bundle)
-Which includes [php-imap](https://github.com/barbushin/php-imap) integration for Symfony 4.x, 5.x and 6.x.
+Which includes [php-imap](https://github.com/barbushin/php-imap) integration for Symfony 4+
 
 ## Installation
 
