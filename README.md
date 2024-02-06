@@ -8,8 +8,8 @@ Which includes [php-imap](https://github.com/barbushin/php-imap) integration for
 #### 1. Composer
 From the command line run
 
-```
-$ composer require dukecity/demo-imap-bundle
+```bash
+composer require dukecity/demo-imap-bundle
 ```
 
 As long as it is not published by Packagist, please just download the code via GitHub !!!
@@ -26,7 +26,7 @@ Here is the example configuration:
 imap:
   connections:
     example_connection:
-      mailbox:  '%env(EXAMPLE_CONNECTION_MAILBOX)%'
+      imap_path:  '%env(EXAMPLE_CONNECTION_MAILBOX)%'
       username: '%env(EXAMPLE_CONNECTION_USERNAME)%'
       password: '%env(EXAMPLE_CONNECTION_PASSWORD)%'
 ```
@@ -34,14 +34,14 @@ imap:
 ## Test 
 Start server and go to https://127.0.0.1:8000 and see if it works.
 
-```
+```bash
 symfony serve
 ```
 
 ## Validate if the mailboxes can connect correct
 
-```
-php bin/console imap-bundle:validate
+```bash
+php bin/console secit:imap:validate-connections
 ```
 
 Result:
@@ -59,6 +59,6 @@ If you use this in CI-Pipeline add the parameter `-q`.
 Password is not displayed for security reasons.
 You can set an array of connections to validate.
 
-```
-php bin/console imap-bundle:validate example_connection example_connection2
+```bash
+php bin/console secit:imap:validate-connections example_connection example_connection2
 ```

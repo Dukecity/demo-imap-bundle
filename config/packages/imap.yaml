@@ -1,11 +1,23 @@
 imap:
     connections:
-        example_connection:
-            mailbox: "{imap.strato.de:993/imap/ssl}"
-            username: '%env(EXAMPLE_CONNECTION_USERNAME)%'
-            password: '%env(EXAMPLE_CONNECTION_PASSWORD)%'
+        #example:
+            #imap_path: "{imap.strato.de:993/imap/ssl}"
+            #username: '%env(EXAMPLE_CONNECTION_USERNAME)%'
+            #password: '%env(EXAMPLE_CONNECTION_PASSWORD)%'
 
-        #example_WRONG_connection:
-            #mailbox: "{imap.strato.de:993/imap/ssl}"
+        itTest:
+            imap_path: "{outlook.office365.com:993/imap/ssl/novalidate-cert/authuser=%env(IT_TEST_CONNECTION_USERNAME)%/user=%env(IT_TEST_CONNECTION_USERNAME)%}"
+            username: '%env(IT_TEST_CONNECTION_USERNAME)%'
+            password: '%env(IT_TEST_CONNECTION_PASSWORD)%'
+
+        # https://stackoverflow.com/a/53606714
+        itSharedTest:
+            imap_path: "{outlook.office365.com:993/imap/ssl/authuser=%env(IT_TEST_CONNECTION_USERNAME)%/user=%env(IT_SHARED_TEST_CONNECTION_USERNAME)%}INBOX"
+            username: '%env(IT_TEST_CONNECTION_USERNAME)%'
+            password: '%env(IT_TEST_CONNECTION_PASSWORD)%'
+
+
+            #example_WRONG_connection:
+            #imap_path: "{imap.strato.de:993/imap/ssl}"
             #username: 'WRONG'
             #password: 'WRONG'
